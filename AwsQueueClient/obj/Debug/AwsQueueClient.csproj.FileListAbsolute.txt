@@ -1,0 +1,17 @@
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AwsQueueClient.dll
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AwsQueueClient.pdb
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.Core.dll
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.S3.dll
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.SQS.dll
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\Newtonsoft.Json.dll
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.Core.pdb
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.Core.xml
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.S3.pdb
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.S3.xml
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.SQS.pdb
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AWSSDK.SQS.xml
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\Newtonsoft.Json.xml
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\obj\Debug\AwsQueueClient.csprojResolveAssemblyReference.cache
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\obj\Debug\AwsQueueClient.dll
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\obj\Debug\AwsQueueClient.pdb
+c:\users\casval zem daikun\documents\visual studio 2015\Projects\AwsProject\AwsQueueClient\bin\Debug\AwsQueueClient.dll.config

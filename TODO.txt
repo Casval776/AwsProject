@@ -1,0 +1,28 @@
+[AwsLogger]
+	- Change logging format to allow for analytics
+	- Possibly add more data, I dunno...
+
+[AwsSQS]
+	- Add logging
+
+[FileWatcher]
+	- Figure out how to make [AwsFileStructure] work to update in real time to reflect system changes
+	- Enhance a few parts to make it better
+
+[AwsProject]
+	- Tie everything together
+
+[AwsDatabase]
+	- Create this
+	- Allow for persistence to DynamoDB
+
+[AwsS3]
+	- Create this
+	- Upload, download, and update items in S3 storage
+
+[General]
+	- Add XML comments
+	- Organize code into region directives
+	- Add comments to uncommented code
+	- Add personal copyright to files
+	- Check this out later: https://weblogs.asp.net/ashben/31773

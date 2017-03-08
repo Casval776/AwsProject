@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AwsQueueClient\AwsQueue.csproj">
-      <Project>{9F6F9E36-CFCD-4C46-A29F-3046331F5C79}</Project>
+      <Project>{9f6f9e36-cfcd-4c46-a29f-3046331f5c79}</Project>
       <Name>AwsQueue</Name>
     </ProjectReference>
   </ItemGroup>

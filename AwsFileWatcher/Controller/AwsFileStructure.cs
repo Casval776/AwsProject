@@ -5,16 +5,24 @@ using AwsFileWatcher.Models;
 
 namespace AwsFileWatcher.Controller
 {
+    /// <summary>
+    /// Controller class to handle functionality of file-system model
+    /// </summary>
     public class AwsFileStructure
     {
+        #region Private Members
         private static AwsFolder _rootFolder;
+        #endregion
 
+        #region Constructors
         public AwsFileStructure()
         {
             //Initialize collection
             if (_rootFolder == null) _rootFolder = FillFileStructure(Data.FileSystem.WatchPath);
         }
+        #endregion
 
+        #region Private Functions
         private static AwsFolder FillFileStructure(string path)
         {
             //Initialize object for current folder
@@ -41,5 +49,6 @@ namespace AwsFileWatcher.Controller
             //Return object
             return curFolder;
         }
+        #endregion
     }
 }

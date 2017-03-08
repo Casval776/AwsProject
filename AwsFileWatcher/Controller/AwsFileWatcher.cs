@@ -6,6 +6,10 @@ using AwsQueue.Model;
 
 namespace AwsFileWatcher.Controller
 {
+    /// <summary>
+    /// Custom wrapper to hold functionality of FileSystemWatcher.
+    /// Handles fired events and redirects accordingly.
+    /// </summary>
     public class AwsFileWatcher
     {
         #region Private Members

@@ -1,0 +1,5 @@
+C:\Users\grans\Source\Repos\AwsProject\AwsProject\bin\Debug\AwsProject.exe.config
+C:\Users\grans\Source\Repos\AwsProject\AwsProject\bin\Debug\AwsProject.exe
+C:\Users\grans\Source\Repos\AwsProject\AwsProject\bin\Debug\AwsProject.pdb
+C:\Users\grans\Source\Repos\AwsProject\AwsProject\obj\Debug\AwsProject.exe
+C:\Users\grans\Source\Repos\AwsProject\AwsProject\obj\Debug\AwsProject.pdb

@@ -1,7 +1,0 @@
-C:\Users\grans\Source\Repos\AwsProject\AwsLogger\bin\Debug\AwsLogger.dll
-C:\Users\grans\Source\Repos\AwsProject\AwsLogger\bin\Debug\AwsLogger.pdb
-C:\Users\grans\Source\Repos\AwsProject\AwsLogger\bin\Debug\log4net.dll
-C:\Users\grans\Source\Repos\AwsProject\AwsLogger\bin\Debug\log4net.xml
-C:\Users\grans\Source\Repos\AwsProject\AwsLogger\obj\Debug\AwsLogger.csprojResolveAssemblyReference.cache
-C:\Users\grans\Source\Repos\AwsProject\AwsLogger\obj\Debug\AwsLogger.dll
-C:\Users\grans\Source\Repos\AwsProject\AwsLogger\obj\Debug\AwsLogger.pdb

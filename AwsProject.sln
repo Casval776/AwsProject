@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsProject", "AwsProject\Aw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsFileWatcher", "AwsFileWatcher\AwsFileWatcher.csproj", "{7F3D7B40-AB0D-49CC-8364-2A2CD43787DD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileWatcher", "FileWatcher", "{749B8E26-045E-4D5F-8D8A-506574A35869}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AwsFileWatcher", "AwsFileWatcher", "{749B8E26-045E-4D5F-8D8A-506574A35869}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AwsSQS", "AwsSQS", "{AC0E48E8-1DAB-44E0-8BDB-F8D88AD7BFC9}"
 EndProject
@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		TODO.txt = TODO.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsPoll", "AwsPoll\AwsPoll.csproj", "{4262ECD0-4E95-47EE-8E46-CA86E4D47C64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{F6FE7214-F60D-48A8-9C90-C52A004B01E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6FE7214-F60D-48A8-9C90-C52A004B01E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6FE7214-F60D-48A8-9C90-C52A004B01E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4262ECD0-4E95-47EE-8E46-CA86E4D47C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4262ECD0-4E95-47EE-8E46-CA86E4D47C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4262ECD0-4E95-47EE-8E46-CA86E4D47C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4262ECD0-4E95-47EE-8E46-CA86E4D47C64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 		{7F3D7B40-AB0D-49CC-8364-2A2CD43787DD} = {749B8E26-045E-4D5F-8D8A-506574A35869}
 		{9F6F9E36-CFCD-4C46-A29F-3046331F5C79} = {AC0E48E8-1DAB-44E0-8BDB-F8D88AD7BFC9}
 		{F6FE7214-F60D-48A8-9C90-C52A004B01E9} = {3C9085B3-D19C-4F83-8190-70E37A055454}
+		{4262ECD0-4E95-47EE-8E46-CA86E4D47C64} = {AC0E48E8-1DAB-44E0-8BDB-F8D88AD7BFC9}
 	EndGlobalSection
 EndGlobal

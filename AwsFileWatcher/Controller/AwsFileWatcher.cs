@@ -67,7 +67,7 @@ namespace AwsFileWatcher.Controller
         #endregion
 
         #region Public Functions
-        public AwsFileWatcher GetInstance => Watcher.Value;
+        public static AwsFileWatcher GetInstance => Watcher.Value;
 
         public void StartWatching() => _watcher.EnableRaisingEvents = true;
 

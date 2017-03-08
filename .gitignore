@@ -1,2 +1,7 @@
-/packages/
+packages
+bin
+obj
 *.dll
+*.exe
+*.pdb
+*.Log.*

@@ -59,7 +59,7 @@ namespace AwsFileWatcher.Controller
             _watcher.EnableRaisingEvents = true;
 
             //Initialize queue client
-            _queueClient = AwsQueueClient.GetInstance;
+            _queueClient = AwsQueueClient.GetInstance();
 
             //Initialize File Structure
             _fileStructure = new AwsFileStructure();
@@ -72,6 +72,8 @@ namespace AwsFileWatcher.Controller
         public void StartWatching() => _watcher.EnableRaisingEvents = true;
 
         public void StopWatching() => _watcher.EnableRaisingEvents = false;
+
+        public AwsFileStructure GetFileStructure() => _fileStructure;
         #endregion
 
         #region Private Events

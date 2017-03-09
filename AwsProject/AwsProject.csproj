@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AwsProject</RootNamespace>
     <AssemblyName>AwsProject</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,6 +58,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AwsDatabase\AwsDatabase.csproj">
+      <Project>{b7006328-bd21-4a24-9137-e9ab91593744}</Project>
+      <Name>AwsDatabase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AwsFileWatcher\AwsFileWatcher.csproj">
       <Project>{7F3D7B40-AB0D-49CC-8364-2A2CD43787DD}</Project>
       <Name>AwsFileWatcher</Name>

@@ -6,23 +6,34 @@ using Amazon;
 using Amazon.Runtime;
 using Amazon.SQS;
 using Amazon.SQS.Model;
-using AwsQueue.Data;
 using AwsQueue.Interface;
 using AwsQueue.Model;
+using AwsQueue.Global;
 using Newtonsoft.Json;
+using AwsLogger.Log;
 
 namespace AwsQueue
 {
     public class AwsQueueClient
     {
+        #region Private Members
         private static AmazonSQSClient _client;
         private static string _queueUrl;
         private static readonly Lazy<AwsQueueClient> QueueClient = new Lazy<AwsQueueClient>(() => new AwsQueueClient());
+        private static Logger _logger;
+        #endregion
 
         #region Constructors
         private AwsQueueClient()
         {
-            if (_client == null) _client = new AmazonSQSClient(new StoredProfileAWSCredentials("developer"), RegionEndpoint.USEast1);
+            //Initialize SQS Client
+            if (_client == null) _client = new AmazonSQSClient(new StoredProfileAWSCredentials(Data.DevAwsAccountName), RegionEndpoint.USEast1);
+
+            //Initialize Logger
+            _logger = new Logger(this);
+            _logger.Debug("Starting Queue Client...");
+
+            //Check queue status
             GetQueueStatus();
         }
 
@@ -30,11 +41,11 @@ namespace AwsQueue
         #endregion
 
         #region Private Static Functions
-        public static AwsQueueClient GetInstance => QueueClient.Value;
+        public static AwsQueueClient GetInstance() => QueueClient.Value;
 
         private static void GetQueueStatus()
         {
-            var response = _client.GetQueueUrl(Global.Queue.QueueName);
+            var response = _client.GetQueueUrl(Data.Queue.QueueName);
             _queueUrl = string.IsNullOrEmpty(response.QueueUrl)
                 ? CreateQueue
                 : _queueUrl = response.QueueUrl;
@@ -44,7 +55,7 @@ namespace AwsQueue
         private static string CreateQueue =>
             _client.CreateQueue(new CreateQueueRequest
             {
-                QueueName = Global.Queue.QueueName
+                QueueName = Data.Queue.QueueName
             }).QueueUrl;
         #endregion
 

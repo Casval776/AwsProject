@@ -11,24 +11,25 @@ namespace AwsFileWatcher.Controller
     public class AwsFileStructure
     {
         #region Private Members
-        private static AwsFolder _rootFolder;
+        public AwsFolder RootFolder { get; set; }
         #endregion
 
         #region Constructors
         public AwsFileStructure()
         {
             //Initialize collection
-            if (_rootFolder == null) _rootFolder = FillFileStructure(Data.FileSystem.WatchPath);
+            if (RootFolder == null) RootFolder = FillFileStructure(Data.FileSystem.WatchPath, true);
         }
         #endregion
 
         #region Private Functions
-        private static AwsFolder FillFileStructure(string path)
+        private static AwsFolder FillFileStructure(string path, bool root)
         {
             //Initialize object for current folder
             var curFolder = new AwsFolder
             {
-                Info = new DirectoryInfo(path)
+                Info = new DirectoryInfo(path),
+                Root = root
             };
 
             //Generate file collection
@@ -40,7 +41,7 @@ namespace AwsFileWatcher.Controller
             //Iterate to next directory in curFolder and recursively trace through it
             var folderList = curFolder.Info
                 .GetDirectories()
-                .Select(dir => FillFileStructure(dir.FullName))
+                .Select(dir => FillFileStructure(dir.FullName, false))
                 .ToList();
 
             //Assign folder collection

@@ -1,7 +1,8 @@
-﻿namespace AwsQueue.Data
+﻿namespace AwsQueue.Global
 {
-    internal struct Global
+    internal struct Data
     {
+        public const string DevAwsAccountName = "developer";
         public struct Queue
         {
             public const string QueueName = "aws-filewatcher";

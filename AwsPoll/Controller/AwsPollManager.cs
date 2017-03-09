@@ -12,7 +12,7 @@ namespace AwsPoll.Controller
     {
         #region Private Members
         private static readonly Lazy<AwsPollManager> PollManager = new Lazy<AwsPollManager>(() => new AwsPollManager());
-        private static AwsQueueClient _queueClient;
+        private static readonly AwsQueueClient QueueClient = AwsQueueClient.GetInstance();
         private static bool _isRunning;
         private static readonly int Timeout = (int) new TimeSpan(0, 0, 5, 0).TotalMilliseconds; //5 minutes
         private static BackgroundWorker _worker;
@@ -35,14 +35,12 @@ namespace AwsPoll.Controller
         #region Private Functions
         private static void Startup()
         {
-            //Initialize AwsQueueClient
-            if (_queueClient == null) _queueClient = AwsQueueClient.GetInstance;
-
             //Initialize default run status
             _isRunning = false;
 
             //Start polling
-            if (_worker == null) _worker = new BackgroundWorker();
+            if (_worker != null) return;
+            _worker = new BackgroundWorker();
             _worker.DoWork += Poll;
         }
 
@@ -51,7 +49,7 @@ namespace AwsPoll.Controller
             while (_isRunning)
             {
                 //Get messages from the queue
-                var result = _queueClient.Dequeue();
+                var result = QueueClient.Dequeue();
 
                 //If count > 0
                 if (result.Result.Any())
@@ -67,7 +65,7 @@ namespace AwsPoll.Controller
         #endregion
 
         #region Public Functions
-        public static AwsPollManager GetInstance => PollManager.Value;
+        public static AwsPollManager GetInstance() => PollManager.Value;
 
         public void StartWork()
         {
@@ -83,7 +81,7 @@ namespace AwsPoll.Controller
 
         public static void OnDequeue(IEnumerable<IAwsArgs> args)
         {
-            DequeueEvent?.Invoke(GetInstance, args);
+            DequeueEvent?.Invoke(GetInstance(), args);
         }
         #endregion
     }
